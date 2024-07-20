@@ -1,0 +1,15 @@
+{
+  "name": "jquery-recipes-2nd-2022",
+  "version": "1.0.0",
+  "description": "This repository accompanies [*JQuery Recipes, 2nd Edition*](https://link.springer.com/book/10.1007/978-1-4842-7304-3) by Bintu Harwani (Apress, 2022).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jquery": "^3.5.30"
+  }
+}
