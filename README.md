@@ -1,3 +1,30 @@
+# jQuery Recipes, 2nd Edition
+
+책 설명
+
+## Development Environment
+
+- Windows 10
+- VS Code
+- git, TortoiseGit
+- nvm for windows
+- node v20.10.0 
+- ...
+
+## devDependencies
+
+- webpack, webpack-cli, webpack-dev-server
+- clean-webpack-plugin, copy-webpack-plugin, html-webpack-plugin
+- babel-loader, @babel/core, @babel/preset-env
+- css-loader, style-loader
+- @types/jquery
+
+
+## Dependencies
+- jquery
+- ...
+
+
 # Apress Source Code
 
 This repository accompanies [*JQuery Recipes, 2nd Edition*](https://link.springer.com/book/10.1007/978-1-4842-7304-3) by Bintu Harwani (Apress, 2022).
