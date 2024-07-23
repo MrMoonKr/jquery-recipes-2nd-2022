@@ -4,14 +4,18 @@
 
 ## Development Environment
 
+개발 및 연습 환경
+
 - Windows 10
 - VS Code
 - git, TortoiseGit
 - nvm for windows
-- node v20.10.0 
+- node v20.10.0 , npm v10.2.3
 - ...
 
 ## devDependencies
+
+개발 의존 모듈
 
 - webpack, webpack-cli, webpack-dev-server
 - clean-webpack-plugin, copy-webpack-plugin, html-webpack-plugin
@@ -21,7 +25,11 @@
 
 
 ## Dependencies
+
+의존 모듈
+
 - jquery
+- jquery-ui , jquery-ui-dist
 - ...
 
 

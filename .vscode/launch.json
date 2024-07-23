@@ -5,6 +5,19 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "웹팩 디버깅",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/node_modules/webpack/bin/webpack.js",
+            "args": [
+                "--config",
+                "${workspaceFolder}/webpack.config.js"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+        },
+        {
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
