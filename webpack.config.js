@@ -10,7 +10,7 @@ const CHAPTER_PARENT = path.join( __dirname, 'src/' ) ;
 const CHAPTER_LIST = [
     'ch01' ,
     'ch02' ,
-    //'ch03' ,
+    'ch03' ,
     //'ch04' ,
     //'ch05' ,
     //'ch06' ,
