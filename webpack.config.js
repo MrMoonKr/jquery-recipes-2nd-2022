@@ -4,6 +4,8 @@ const fs    = require( 'fs' ).promises ;
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 const CopyPlugin = require( 'copy-webpack-plugin' );
+const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
+const { schema } = require( 'webpack-dev-server' );
 
 
 const CHAPTER_PARENT = path.join( __dirname, 'src/' ) ;
@@ -36,6 +38,7 @@ module.exports = async () => {
 
         entry: {
             //main: './src/main.js',
+            main: './src/js/main.js',
 
             ...generatedEntries,
         },
@@ -79,9 +82,51 @@ module.exports = async () => {
                 {
                     test: /\.css$/,
                     use: [
-                        'style-loader',
-                        'css-loader'
+                        {
+                            // Adds CSS to the DOM by injecting a `<style>` tag
+                            //loader: 'style-loader'
+                            // Extracts CSS for each JS file that includes CSS
+                            loader: MiniCssExtractPlugin.loader // for bootstrap
+                        },
+                        {
+                            loader: 'css-loader'
+                        }
                     ]
+                },
+                {
+                    test: /\.(scss)$/,
+                    use: [
+                        {
+                            // Adds CSS to the DOM by injecting a `<style>` tag
+                            //loader: 'style-loader'
+                            // Extracts CSS for each JS file that includes CSS
+                            loader: MiniCssExtractPlugin.loader // for bootstrap
+                        },
+                        {
+                            loader: 'css-loader'
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                            postcssOptions: {
+                                plugins: () => [
+                                    require('autoprefixer')
+                                ]
+                            }
+                            }
+                        },
+                        {
+                            loader: 'sass-loader'
+                        }
+                    ]
+                },
+                {
+                    mimetype: 'image/svg+xml',
+                    //schema: 'data',
+                    type: 'asset/resource',
+                    generator: {
+                        filename: 'icons/[hash].svg'
+                    }
                 }
             ]
         },
@@ -94,10 +139,12 @@ module.exports = async () => {
                     { 
                         from: 'public',
                         //to: '',
-                        filter: ( source ) => !source.includes( 'index.html' )
+                        //filter: ( source ) => !source.includes( 'index.html' )
                     }
                 ]
             } ),
+
+            new MiniCssExtractPlugin() ,
 
             // new HtmlWebpackPlugin( {
             //     template: './src/template.html'

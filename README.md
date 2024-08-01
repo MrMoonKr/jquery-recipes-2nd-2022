@@ -19,6 +19,7 @@
 
 - webpack, webpack-cli, webpack-dev-server
 - clean-webpack-plugin, copy-webpack-plugin, html-webpack-plugin
+- mini-css-extract-plugin
 - babel-loader, @babel/core, @babel/preset-env
 - css-loader, style-loader
 - @types/jquery
@@ -31,8 +32,14 @@
 
 - jquery
 - jquery-ui
+- bootstrap
+- @popperjs/core
 - ...
 - ...
+
+## Bootstrap & Webpack
+
+- [Webpack Config](https://getbootstrap.com/docs/5.2/getting-started/webpack/)
 
 
 # Apress Source Code
