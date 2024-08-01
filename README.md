@@ -22,6 +22,7 @@
 - babel-loader, @babel/core, @babel/preset-env
 - css-loader, style-loader
 - @types/jquery
+- @types/jqueryui
 
 
 ## Dependencies
@@ -29,7 +30,8 @@
 의존 모듈
 
 - jquery
-- jquery-ui , jquery-ui-dist
+- jquery-ui
+- ...
 - ...
 
 
